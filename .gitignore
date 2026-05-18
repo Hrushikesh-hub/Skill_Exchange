@@ -62,3 +62,9 @@ Screenshot*.png
 # Project reports and PDFs (submit separately, not on GitHub)
 *.pdf
 Project_Report_*.html
+
+# Android build outputs
+/app/build/
+/build/
+*.apk
+*.aab
