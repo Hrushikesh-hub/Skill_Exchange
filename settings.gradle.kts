@@ -1,3 +1,4 @@
+﻿// SkillExchange - Barter-Based Skill Sharing Android App
 pluginManagement {
     repositories {
         google {
