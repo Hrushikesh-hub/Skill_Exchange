@@ -58,3 +58,7 @@ PROJECT_OVERVIEW.md
 
 # Raw screenshots at root level (use /screenshots folder instead)
 Screenshot*.png
+
+# Project reports and PDFs (submit separately, not on GitHub)
+*.pdf
+Project_Report_*.html
