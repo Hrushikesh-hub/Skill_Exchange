@@ -1,0 +1,101 @@
+# 🔥 FIREBASE SETUP — READ BEFORE BUILDING
+
+## ⚠️ CRITICAL: You need `google-services.json` before building!
+
+---
+
+## Step 1: Create Firebase Project (2 minutes)
+
+1. Open [https://console.firebase.google.com/](https://console.firebase.google.com/)
+2. Click **"Add project"** → Name: `SkillExchange` → **Create project**
+
+## Step 2: Register Android App
+
+1. Click the **Android icon** (&lt;/&gt;)
+2. Package name: **`com.example.skillexchangeapp`**
+3. App nickname: `SkillExchange` → **Register app**
+4. **Download `google-services.json`**
+5. Place it here: `app/google-services.json` (next to `app/build.gradle.kts`)
+6. Click **Next → Next → Continue to console**
+
+## Step 3: Enable Authentication
+
+1. Firebase Console → **Authentication** → **Get started**
+2. Enable **Email/Password** → Save
+
+## Step 4: Enable Firestore (Cloud Database)
+
+1. Firebase Console → **Firestore Database** → **Create database**
+2. Choose: **Start in test mode** → Location: `asia-south1` → Enable
+
+## Step 5: Enable Realtime Database (Chat)
+
+1. Firebase Console → **Realtime Database** → **Create Database**
+2. Choose: **Start in test mode** → Location: `asia-south1` → Done
+
+---
+
+## Security Rules (Already set to test mode — open for 30 days)
+
+Firestore Rules:
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+```
+
+Realtime DB Rules:
+```json
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+
+---
+
+## Demo Login Credentials (Auto-seeded on first launch)
+
+| Email              | Password | Role  |
+|--------------------|----------|-------|
+| rajesh@demo.com    | demo123  | Admin |
+| priya@demo.com     | demo123  | User  |
+| venkat@demo.com    | demo123  | User  |
+| meena@demo.com     | demo123  | User  |
+| suresh@demo.com    | demo123  | User  |
+| kavitha@demo.com   | demo123  | User  |
+| ravi@demo.com      | demo123  | User  |
+| anitha@demo.com    | demo123  | User  |
+
+---
+
+## What Firebase Powers in This App
+
+| Feature | Firebase Service |
+|---------|-----------------|
+| User login/registration | Firebase Authentication |
+| All user data, needs, offers, swaps | Firestore (cloud sync) |
+| Real-time chat messages | Firebase Realtime Database |
+| Notifications, reviews, reports | Firestore |
+| Works offline too | Room SQLite (local cache) |
+
+---
+
+## Build Commands
+
+```bash
+# Sync Gradle
+./gradlew sync
+
+# Run debug build
+./gradlew assembleDebug
+
+# Or just press Run in Android Studio
+```

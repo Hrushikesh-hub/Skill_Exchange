@@ -1,0 +1,60 @@
+## Android Studio generated files and settings
+
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# Local configuration file (do not commit!)
+local.properties
+
+# Android Studio
+*.iml
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/libraries
+.idea/caches
+.idea/modules.xml
+.idea/navEditor.xml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# External native build
+.externalNativeBuild
+.cxx
+
+# Kotlin
+*.kotlin_module
+
+# Captures
+/captures
+
+# KeyStore (NEVER commit signing keys)
+*.jks
+*.keystore
+
+# Proguard (keep output dir clean)
+proguard/
+
+# Android Profiling
+*.hprof
+
+# Internal / non-project files (do not upload to GitHub)
+push_to_github.bat
+student_evaluation_criteria*.html
+.kotlin/
+
+# Internal AI context and scratch docs
+PROJECT_CONTEXT_FOR_CLAUDE.md
+SKILLEXCHANGE_COMPLETE_REFERENCE.md
+SKILL_EXCHANGE_REPORT_DATA.txt
+PROJECT_OVERVIEW.md
+
+# Raw screenshots at root level (use /screenshots folder instead)
+Screenshot*.png

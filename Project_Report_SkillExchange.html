@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Report – SkillExchange (Project 25)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12pt;
+      color: #111;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 50px 60px;
+    }
+
+    /* Header */
+    .header {
+      border-bottom: 3px solid #3b1f8c;
+      padding-bottom: 16px;
+      margin-bottom: 28px;
+    }
+
+    .org-name {
+      color: #3b1f8c;
+      font-size: 13pt;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .project-label {
+      font-size: 11pt;
+      color: #555;
+    }
+
+    h1 {
+      font-size: 18pt;
+      color: #1a1a1a;
+      margin: 12px 0 4px;
+    }
+
+    h2 {
+      font-size: 13pt;
+      color: #3b1f8c;
+      margin: 22px 0 8px;
+      border-left: 4px solid #3b1f8c;
+      padding-left: 10px;
+    }
+
+    h3 {
+      font-size: 11pt;
+      color: #222;
+      margin: 14px 0 6px;
+    }
+
+    p {
+      margin-bottom: 10px;
+      text-align: justify;
+    }
+
+    ul {
+      margin: 6px 0 12px 22px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    li strong {
+      color: #3b1f8c;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 11pt;
+    }
+
+    th {
+      background: #3b1f8c;
+      color: #fff;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      vertical-align: top;
+    }
+
+    tr:nth-child(even) td {
+      background: #f5f3ff;
+    }
+
+    .info-box {
+      background: #f5f3ff;
+      border: 1px solid #c3b5f5;
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin: 10px 0 16px;
+    }
+
+    .info-box p { margin: 4px 0; }
+
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid #ccc;
+      padding-top: 12px;
+      font-size: 10pt;
+      color: #555;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #3b1f8c;
+      color: #fff;
+      font-size: 10pt;
+      padding: 2px 10px;
+      border-radius: 12px;
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    .success-criteria li {
+      padding: 5px 0;
+      border-bottom: 1px dashed #ddd;
+    }
+
+    @media print {
+      body { font-size: 11pt; }
+      .page { padding: 20mm 18mm; max-width: none; }
+      .badge { border: 1px solid #3b1f8c; color: #3b1f8c; background: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="org-name">MindMatrix VTO Internship Program</div>
+      <div class="project-label">Final Project Report &nbsp;|&nbsp; Android App Development using GenAI</div>
+    </div>
+
+    <!-- Title Block -->
+    <div class="info-box">
+      <p><strong>Project Title :</strong> 25</p>
+      <p><strong>Project Name :</strong> Android App Development using GenAI – Skill-Exchange (Self-Employment)</p>
+      <p><strong>Technology Stack :</strong> Android (Kotlin), Firebase, Room DB, MVVM Architecture, GenAI</p>
+      <p><strong>GitHub Repository :</strong> https://github.com/Hrushikesh-hub/Skill_Exchange</p>
+      <p><strong>Student :</strong> Hrushikesh M &nbsp;|&nbsp; <strong>Email :</strong> cooldestinyrockers@gmail.com</p>
+    </div>
+
+    <!-- 1. Problem Statement -->
+    <h2>1. The Problem Statement</h2>
+    <p>
+      Village technicians (plumbers, electricians) often need each other's help but <strong>lack cash to pay</strong>.
+      They can "Barter" their skills but don't know who has what skill. There is no structured platform that allows
+      rural workers to find, negotiate, and track skill-based exchanges without monetary transactions.
+    </p>
+
+    <!-- 2. Vision & Description -->
+    <h2>2. Detailed Description (The Vision)</h2>
+    <p>
+      <strong>Skill-Exchange</strong> is a <em>"Barter Economy"</em> platform for rural technicians. It allows artisans
+      to <strong>"Trade Hours"</strong> — a plumber can fix an electrician's pipes in exchange for motor repair.
+      It builds a self-reliant community of "Skill-Swap" experts by enabling fair, transparent, and trackable
+      skill-based exchanges using a digital platform.
+    </p>
+    <p>
+      The app uses Firebase for real-time data sync, a Room local database for offline support, and an AI-powered
+      barter matching engine to suggest the best skill swap partners.
+    </p>
+
+    <!-- 3. App Usage & User Flow -->
+    <h2>3. App Usage &amp; User Flow</h2>
+    <ul>
+      <li><strong>Skill Profile:</strong> "I am an Expert Carpenter." – Users register with their skill set.</li>
+      <li><strong>Need Post:</strong> "Need help with leaking roof." – Post what skill you require.</li>
+      <li><strong>Swap Offer:</strong> "I'll do your woodwork in exchange for roof repair." – Propose a barter.</li>
+      <li><strong>Trust Score:</strong> Based on successful community swaps, users build a reputation score.</li>
+      <li><strong>Chat:</strong> Real-time messaging to negotiate and confirm swap details.</li>
+      <li><strong>Wallet:</strong> Track skill points earned and spent (1 hour = 1 point).</li>
+    </ul>
+
+    <!-- 4. Technical Implementation -->
+    <h2>4. Technical Implementation</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Layer</th>
+          <th>Technology Used</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Language</td><td>Kotlin 100%</td></tr>
+        <tr><td>Platform</td><td>Android (minSdk 26, targetSdk 36)</td></tr>
+        <tr><td>Architecture</td><td>MVVM + Repository Pattern</td></tr>
+        <tr><td>Local Database</td><td>Room (SQLite) – 14 entities, 14 DAOs</td></tr>
+        <tr><td>Cloud Backend</td><td>Firebase Firestore + Realtime Database</td></tr>
+        <tr><td>Authentication</td><td>Firebase Auth (Email/Password)</td></tr>
+        <tr><td>UI Framework</td><td>XML Layouts + Material Design 3 + View Binding</td></tr>
+        <tr><td>AI Engine</td><td>Custom Barter Suggestion Engine (GenAI-assisted)</td></tr>
+        <tr><td>Navigation</td><td>Android Navigation Component (17 screens)</td></tr>
+        <tr><td>Async</td><td>Kotlin Coroutines + LiveData</td></tr>
+        <tr><td>Build System</td><td>Gradle with Kotlin DSL</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Key Technical Hints from Project Spec:</h3>
+    <ul>
+      <li><strong>Firestore:</strong> Used as a "Skill Board" with real-time updates for skill offers and needs.</li>
+      <li><strong>Logic:</strong> Implements a "Skill Point" system — 1 hour of service = 1 point. Points are awarded
+          only after both parties confirm swap completion.</li>
+      <li><strong>UI:</strong> Chat-like interface for negotiating swaps, community-focused and friendly design.</li>
+    </ul>
+
+    <!-- 5. Key Features -->
+    <h2>5. Key Features Implemented</h2>
+
+    <div>
+      <span class="badge">Firebase Auth</span>
+      <span class="badge">Skill Board</span>
+      <span class="badge">Barter Swap</span>
+      <span class="badge">Real-time Chat</span>
+      <span class="badge">AI Matching</span>
+      <span class="badge">Trust Score</span>
+      <span class="badge">Skill Wallet</span>
+      <span class="badge">Notifications</span>
+      <span class="badge">Dashboard</span>
+      <span class="badge">Admin Panel</span>
+    </div>
+
+    <ul style="margin-top: 12px;">
+      <li><strong>Firebase Authentication:</strong> Secure email/password login and registration.</li>
+      <li><strong>Skill Board:</strong> Post skills you offer and needs you want fulfilled, filterable by skill type.</li>
+      <li><strong>Barter Swap System:</strong> Propose, accept, reject, and track skill swaps through lifecycle.</li>
+      <li><strong>Real-time Chat:</strong> Message other users directly within a confirmed swap.</li>
+      <li><strong>AI Match Suggestions:</strong> Smart barter matching engine with compatibility scoring.</li>
+      <li><strong>Trust Score &amp; Gamification:</strong> Reputation system with badges and skill points.</li>
+      <li><strong>Skill Wallet:</strong> Track earned and spent skill points per transaction.</li>
+      <li><strong>Admin Panel:</strong> Moderate users, verify skills, and handle reports.</li>
+    </ul>
+
+    <!-- 6. Impact Goals -->
+    <h2>6. Impact Goals</h2>
+    <ul>
+      <li><strong>Self-Reliant Communities:</strong> Reducing village dependency on outside technicians by enabling local skill sharing.</li>
+      <li><strong>Skill Valorization:</strong> Giving dignity and economic value to traditional manual skills.</li>
+      <li><strong>Social Capital:</strong> Building trust and cooperation among local workers through a transparent barter system.</li>
+    </ul>
+
+    <!-- 7. Success Criteria -->
+    <h2>7. Success Criteria (as per Project Specification)</h2>
+    <ul class="success-criteria">
+      <li>✅ The "Need Post" must be filterable by "Skill Required." — <em>Implemented in NeedFeedFragment with category filter.</em></li>
+      <li>✅ The "Trust Score" must increase only after <strong>both parties confirm</strong> a swap. — <em>Implemented in SwapManagementFragment with dual-confirmation logic.</em></li>
+      <li>✅ The UI must be community-focused and friendly. — <em>Material Design 3 with warm colors, clear icons, and simple navigation.</em></li>
+    </ul>
+
+    <!-- 8. Project Structure -->
+    <h2>8. Project Structure Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Folder / File</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>app/src/main/java/.../ui/fragment/</td><td>17 screen fragments (Login, Dashboard, Offer, Chat, etc.)</td></tr>
+        <tr><td>app/src/main/java/.../ui/viewmodel/</td><td>3 ViewModels (MVVM pattern)</td></tr>
+        <tr><td>app/src/main/java/.../ui/adapter/</td><td>11 RecyclerView adapters</td></tr>
+        <tr><td>app/src/main/java/.../data/local/</td><td>Room DB – 14 entities + 14 DAOs</td></tr>
+        <tr><td>app/src/main/java/.../data/firebase/</td><td>Firestore &amp; Realtime DB sync layer</td></tr>
+        <tr><td>app/src/main/java/.../ai/</td><td>Barter suggestion engine (AI matching)</td></tr>
+        <tr><td>app/src/main/res/layout/</td><td>33 XML layout files</td></tr>
+        <tr><td>app/google-services.json</td><td>Firebase project configuration</td></tr>
+        <tr><td>build.gradle.kts / settings.gradle.kts</td><td>Gradle build configuration (Kotlin DSL)</td></tr>
+        <tr><td>screenshots/</td><td>App screenshots for documentation</td></tr>
+        <tr><td>README.md</td><td>Complete setup guide and project documentation</td></tr>
+      </tbody>
+    </table>
+
+    <!-- 9. Setup Instructions -->
+    <h2>9. Setup &amp; Run Instructions</h2>
+    <ol style="margin-left: 22px; line-height: 2;">
+      <li>Clone: <code>git clone https://github.com/Hrushikesh-hub/Skill_Exchange.git</code></li>
+      <li>Open in Android Studio (Hedgehog 2023.1.1 or newer)</li>
+      <li>Add your own <code>google-services.json</code> in the <code>app/</code> folder</li>
+      <li>Enable Firebase Auth (Email/Password), Firestore, and Realtime Database</li>
+      <li>Sync Gradle and run: <code>./gradlew installDebug</code> or use <strong>Run → Run 'app'</strong></li>
+      <li>Demo credentials: Email <code>demo@skillexchange.com</code> / Password <code>Demo@1234</code></li>
+    </ol>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>SkillExchange – Project 25 | MindMatrix VTO Internship</span>
+      <span>Hrushikesh M | 2026</span>
+    </div>
+
+  </div>
+</body>
+</html>
