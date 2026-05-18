@@ -1,41 +1,41 @@
-# 🔥 FIREBASE SETUP — READ BEFORE BUILDING
+﻿# ðŸ”¥ FIREBASE SETUP â€” READ BEFORE BUILDING
 
-## ⚠️ CRITICAL: You need `google-services.json` before building!
+## âš ï¸ CRITICAL: You need `google-services.json` before building!
 
 ---
 
 ## Step 1: Create Firebase Project (2 minutes)
 
 1. Open [https://console.firebase.google.com/](https://console.firebase.google.com/)
-2. Click **"Add project"** → Name: `SkillExchange` → **Create project**
+2. Click **"Add project"** â†’ Name: `SkillExchange` â†’ **Create project**
 
 ## Step 2: Register Android App
 
 1. Click the **Android icon** (&lt;/&gt;)
 2. Package name: **`com.example.skillexchangeapp`**
-3. App nickname: `SkillExchange` → **Register app**
+3. App nickname: `SkillExchange` â†’ **Register app**
 4. **Download `google-services.json`**
 5. Place it here: `app/google-services.json` (next to `app/build.gradle.kts`)
-6. Click **Next → Next → Continue to console**
+6. Click **Next â†’ Next â†’ Continue to console**
 
 ## Step 3: Enable Authentication
 
-1. Firebase Console → **Authentication** → **Get started**
-2. Enable **Email/Password** → Save
+1. Firebase Console â†’ **Authentication** â†’ **Get started**
+2. Enable **Email/Password** â†’ Save
 
 ## Step 4: Enable Firestore (Cloud Database)
 
-1. Firebase Console → **Firestore Database** → **Create database**
-2. Choose: **Start in test mode** → Location: `asia-south1` → Enable
+1. Firebase Console â†’ **Firestore Database** â†’ **Create database**
+2. Choose: **Start in test mode** â†’ Location: `asia-south1` â†’ Enable
 
 ## Step 5: Enable Realtime Database (Chat)
 
-1. Firebase Console → **Realtime Database** → **Create Database**
-2. Choose: **Start in test mode** → Location: `asia-south1` → Done
+1. Firebase Console â†’ **Realtime Database** â†’ **Create Database**
+2. Choose: **Start in test mode** â†’ Location: `asia-south1` â†’ Done
 
 ---
 
-## Security Rules (Already set to test mode — open for 30 days)
+## Security Rules (Already set to test mode â€” open for 30 days)
 
 Firestore Rules:
 ```
@@ -99,3 +99,7 @@ Realtime DB Rules:
 
 # Or just press Run in Android Studio
 ```
+
+
+---
+> Last updated: May 2026 - Verified working with Firebase SDK 33.x
